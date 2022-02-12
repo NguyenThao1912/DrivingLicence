@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="data"
+            type="com.example.drivinglicense.model.NoticeBoard" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="82dp"
+                android:layout_height="82dp"
+                android:background="?actionBarItemBackground"
+                android:id="@+id/iv_nb"/>
+            <LinearLayout
+                android:layout_marginLeft="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{data.name}"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:id="@+id/tv_name_nb"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{data.detail}"
+                    android:textColor="#353535"
+                    android:id="@+id/tv_detail_nb"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_margin="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#A1A1A1"/>
+    </LinearLayout>
+</layout>

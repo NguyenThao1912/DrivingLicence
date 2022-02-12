@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3F3F3">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_black_36dp"
+            android:background="?actionBarItemBackground"
+            android:padding="8dp"
+            android:id="@+id/bt_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mẹo Thi Kết Quả Cao"
+            android:id="@+id/title"
+            android:layout_toRightOf="@id/bt_back"
+            android:padding="8dp"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp"/>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_below="@id/bt_back"
+            android:background="?actionBarItemBackground"
+            app:tabIndicatorColor="#00B6A5"
+            app:tabSelectedTextColor="#00B6A5"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_below="@id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewPager"/>
+
+    </RelativeLayout>
+</layout>

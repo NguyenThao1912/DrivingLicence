@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.drivinglicense">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_traffic_lights"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DrivingLicense">
+        <activity android:name=".ResultActivity"></activity>
+        <activity
+            android:name=".views.QuestionActivity"
+            android:label="@string/title_activity_question"
+            android:theme="@style/Theme.DrivingLicense.NoActionBar" />
+        <activity
+            android:name=".views.TestKit"
+            android:icon="@drawable/ic_traffic_lights"
+            android:label="Đề Thi Bằng A1"
+            android:parentActivityName=".views.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.MainActivity" />
+        </activity>
+        <activity
+            android:name=".views.MainActivity"
+            android:label="Ôn Thi GPLX">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".views.notice_board.ActivityNoticeBoard"
+            android:theme="@style/Theme.DrivingLicense.NoActionBar">
+
+        </activity>
+        <activity android:name=".views.tip.ActivityTip"
+            android:theme="@style/Theme.DrivingLicense.NoActionBar"></activity>
+        <activity android:name=".views.dethi.ActivityDeThi"
+            android:parentActivityName=".views.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
